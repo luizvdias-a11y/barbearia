@@ -123,7 +123,7 @@ async function createClient(){
   const nome=$("clientName").value.trim(), telefone=$("clientPhone").value.trim(), observacoes=$("clientNotes").value.trim();
   if(!nome) return;
   if(!db) return toast("Configure o Supabase primeiro.",true);
-  const {data,error}=await db.from("clientes").insert({nome,telefone,observacoes}).select().single();
+  const {data,error}=await supabase .from('clientes') .select('*') .single();
   if(error) return toast(error.message,true);
   $("clientForm").reset(); $("clientModal").classList.add("hidden");
   await loadAll(); fillClients(data.id); toast("Cliente cadastrado e selecionado!");
