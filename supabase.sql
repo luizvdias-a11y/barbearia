@@ -52,3 +52,9 @@ create policy "barberflow agendamentos select" on public.agendamentos for select
 create policy "barberflow agendamentos insert" on public.agendamentos for insert to anon with check (true);
 create policy "barberflow agendamentos update" on public.agendamentos for update to anon using (true) with check (true);
 create policy "barberflow agendamentos delete" on public.agendamentos for delete to anon using (true);
+
+
+-- Permissões necessárias para o GitHub Pages usando a chave pública (anon).
+grant usage on schema public to anon;
+grant select, insert, update on table public.clientes to anon;
+grant select, insert, update, delete on table public.agendamentos to anon;
