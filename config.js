@@ -6,6 +6,6 @@
   IMPORTANTE: nunca use a chave service_role aqui.
 */
 window.BARBERFLOW_CONFIG = {
-  SUPABASE_URL: "COLE_AQUI_A_PROJECT_URL",
-  SUPABASE_ANON_KEY: "COLE_AQUI_A_CHAVE_ANON_PUBLIC"
+  SUPABASE_URL: "https://kjgcdsxlfyprrohtqczg.supabase.co",
+  SUPABASE_ANON_KEY: "sb_publishable_Eh8-5tOSD_I8eNlNYmjw7w_PGlhF7ry"
 };
